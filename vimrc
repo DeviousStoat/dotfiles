@@ -28,10 +28,6 @@ set scrolloff=2             " Always keep 2 lines above and below cursor
 
 let mapleader = " "
 
-" UNYC
-" open atlas-ng TODO
-nnoremap <leader>t :vsplit ~/Unyc/atlas/TODO.md<cr>
-
 " Escape is too far
 inoremap kj <Esc>
 " vnoremap kj <Esc>
