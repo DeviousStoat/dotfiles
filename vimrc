@@ -114,6 +114,9 @@ call plug#begin('~/.vim/plugged')
 
     " ColorSchemes
 
+        " Wal random colorscheme generator, using pywal
+        Plug 'dylanaraps/wal.vim'
+
         " Dracula color scheme
         Plug 'dracula/vim',{'as':'dracula'}    
 
@@ -165,8 +168,17 @@ nmap gj <Plug>(ale_next_wrap)
 
 " Colorscheme
 
-let g:dracula_italic = 0
-colorscheme dracula
+" let g:dracula_italic = 0
+" colorscheme dracula
+
+colorscheme wal
+
+command! -narg=+ Silent
+            \ execute 'silent <args>'
+            \ | redraw!
+
+" Fidgeting colorscheme random, using pywal and wal plugin
+noremap <silent> <leader>kj :Silent !wal --theme random_dark &>/dev/null &<CR>
 
 " Config vim-signify
 
