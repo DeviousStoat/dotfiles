@@ -25,6 +25,7 @@ set autochdir               " Stay in directory of edited file
 set incsearch               " Search while typing
 set hlsearch                " Highlight search
 set scrolloff=2             " Always keep 2 lines above and below cursor
+set mouse=r
 
 let mapleader = " "
 
@@ -104,6 +105,12 @@ call plug#begin('~/.vim/plugged')
 
     " Cheat.sh cheatsheets
     Plug 'dbeniamine/cheat.sh-vim'
+
+    " Golang plugin
+    Plug 'fatih/vim-go'
+
+    " Testing plugin
+    Plug 'junegunn/vader.vim'
 
     " ColorSchemes
 

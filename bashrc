@@ -119,6 +119,15 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# enable bash completion
+for file in /etc/bash_completion.d/*; do
+    . "$file"
+done
+
+if [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+fi
+
 # start tmux automatically
 # if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
 #   exec tmux
@@ -129,3 +138,6 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 if command -v pyenv 1>/dev/null 2>&1; then
  eval "$(pyenv init -)"
 fi
+
+export PATH=~/bin:$PATH
+export PATH=$PATH:/usr/local/go/bin
